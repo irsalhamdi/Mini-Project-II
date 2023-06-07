@@ -1,0 +1,515 @@
+{
+	"info": {
+		"_postman_id": "424eb3a6-1766-42df-92af-ba820d6fb570",
+		"name": "CRM API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17369139",
+		"_collection_link": "https://blue-shadow-817996.postman.co/workspace/New-Team-Workspace~1a7d8e01-8979-4409-90d8-2f00adb88f2d/collection/17369139-424eb3a6-1766-42df-92af-ba820d6fb570?action=share&creator=17369139&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Actor",
+			"item": [
+				{
+					"name": "Get All Actors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MTQ1MjE4LCJpYXQiOjE2ODYwNTg4MTh9.SvoEjatZ9uQGTj1-73P5uHgIKrOaP16sLMpLM9tIrwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MTQ1MjE4LCJpYXQiOjE2ODYwNTg4MTh9.SvoEjatZ9uQGTj1-73P5uHgIKrOaP16sLMpLM9tIrwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MDU3MzQ0LCJpYXQiOjE2ODU5NzA5NDR9.gMcT4Cgn8HZP0bytR1cnw99lVzFkcUMSVkdTne2Z0LA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"blablabla\",\n    \"password\":\"blablabla\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MTQ1MjE4LCJpYXQiOjE2ODYwNTg4MTh9.SvoEjatZ9uQGTj1-73P5uHgIKrOaP16sLMpLM9tIrwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"passsword\",\n    \"password\":\"blablabla\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activated Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MTQ1MjE4LCJpYXQiOjE2ODYwNTg4MTh9.SvoEjatZ9uQGTj1-73P5uHgIKrOaP16sLMpLM9tIrwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor/4/activate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor",
+								"4",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivated Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MTQ1MjE4LCJpYXQiOjE2ODYwNTg4MTh9.SvoEjatZ9uQGTj1-73P5uHgIKrOaP16sLMpLM9tIrwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor/4/deactivate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor",
+								"4",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MTQ1MjE4LCJpYXQiOjE2ODYwNTg4MTh9.SvoEjatZ9uQGTj1-73P5uHgIKrOaP16sLMpLM9tIrwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"superadmin\",\n    \"password\": \"superadmin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/actor/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"actor",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get All Customers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MDI0OTM0LCJpYXQiOjE2ODU5Mzg1MzR9.6vJS6LPZJoGY9oYDSLpHMisAy1WOuu5nUgxjQV8bp-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MDI0OTM0LCJpYXQiOjE2ODU5Mzg1MzR9.6vJS6LPZJoGY9oYDSLpHMisAy1WOuu5nUgxjQV8bp-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customer/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customer",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MDI0OTM0LCJpYXQiOjE2ODU5Mzg1MzR9.6vJS6LPZJoGY9oYDSLpHMisAy1WOuu5nUgxjQV8bp-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\":\"ok\",\n    \"lastname\":\"hahah\",\n    \"email\":\"hei@ok.k\",\n    \"avatar\":\"word\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customer/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customer",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MDI0OTM0LCJpYXQiOjE2ODU5Mzg1MzR9.6vJS6LPZJoGY9oYDSLpHMisAy1WOuu5nUgxjQV8bp-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customer/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customer",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoxLCJ1c2VyX2FnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4zMi4yIiwiZXhwIjoxNjg2MDI0OTM0LCJpYXQiOjE2ODU5Mzg1MzR9.6vJS6LPZJoGY9oYDSLpHMisAy1WOuu5nUgxjQV8bp-8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\":\"ok\",\n    \"lastname\":\"hahah\",\n    \"email\":\"hei@ok.k\",\n    \"avatar\":\"word\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customer/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customer",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
